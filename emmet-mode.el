@@ -3532,7 +3532,7 @@ Return `(,inner-text ,input-without-inner-text) if succeeds, otherwise return
 
 (defun emmet-name (input)
   "Parse a class or identifier name, e.g. news, footer, mainimage"
-  (emmet-parse "\\([a-zA-Z$@][a-zA-Z0-9$@_:-]*\\)" 2 "class or identifer name"
+  (emmet-parse "\\([a-zA-Z$@][a-zA-Z0-9$@_:-]*\\)" 2 "class or identifier name"
                    `((name . ,(emmet-split-numbering-expressions
                                (elt it 1))) . ,input)))
 
@@ -3564,7 +3564,7 @@ Return `(,inner-text ,input-without-inner-text) if succeeds, otherwise return
   Emmet AST.")
 
 (defvar emmet-jsx-className-braces? nil
-  "Wether to wrap classNames in {} instead of \"\"")
+  "Whether to wrap classNames in {} instead of \"\"")
 
 (emmet-defparameter
  emmet-tag-settings-table
@@ -4217,7 +4217,7 @@ Return `(,inner-text ,input-without-inner-text) if succeeds, otherwise return
   (emmet-join-string
    (mapcar
     #'(lambda (expr)
-        (let* 
+        (let*
 	    ((hash-map (if emmet-use-sass-syntax emmet-sass-snippets emmet-css-snippets))
 	     (basement
 	      (emmet-aif
